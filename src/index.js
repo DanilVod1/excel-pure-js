@@ -1,10 +1,5 @@
 import './module';
-import './scss/style.scss';
+import './scss/index.scss';
+
 console.log('work!');
 ('use strict');
-
-describe('some test', () => {
-  it('should return a string value', (done) => {
-    return done();
-  });
-});

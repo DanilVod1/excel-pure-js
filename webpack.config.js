@@ -3,7 +3,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
@@ -16,9 +16,6 @@ const jsLoaders = () => {
       },
     },
   ];
-  if (isDev) {
-    loaders.push('eslint-webpack-plugin');
-  }
   return loaders;
 };
 
@@ -46,6 +43,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new ESLintPlugin(),
     new HTMLWebpackPlugin({
       template: 'index.html',
       minify: {
