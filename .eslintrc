@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["prettier"],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "google", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi":"off",
+        "eol-last":"off",
+        "arrow-parens":"off",
+        "comma-dangle":"off",
+        "prettier/prettier": ["error"],
+        "require-jsdoc":"off"
+    }
+}
