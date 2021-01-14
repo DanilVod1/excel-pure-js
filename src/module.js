@@ -1,1 +1,1 @@
-console.log('mod js')
+console.log('mod js');
