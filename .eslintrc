@@ -12,11 +12,13 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-debugger":"off",
+        "require-jsdoc":"off",
         "semi":"off",
         "eol-last":"off",
         "arrow-parens":"off",
         "comma-dangle":"off",
-        "prettier/prettier": ["error"],
-        "require-jsdoc":"off"
+        "prettier/prettier": ["error"]
+        
     }
 }
