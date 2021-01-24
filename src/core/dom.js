@@ -12,8 +12,20 @@ class Dom {
     }
     return html.outerHTML.trim();
   }
+  get data() {
+    return this.$el.dataset;
+  }
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
   clear() {
     this.html('');
+    return this;
+  }
+  css(style = {}) {
+    Object.keys(style).map((el) => {
+      this.$el.style[el] = style[el];
+    });
     return this;
   }
   append(node) {
@@ -32,6 +44,13 @@ class Dom {
   }
   off(eventType, callback) {
     this.$el.removeEventListener(eventType, callback);
+  }
+
+  closest(selector) {
+    return this.$el.closest(selector);
+  }
+  getCoords() {
+    return this.$el.getBoundingClientRect();
   }
 }
 
